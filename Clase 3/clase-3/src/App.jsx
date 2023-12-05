@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css"
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const name = "Tomas Tissoni"
+  let city = "CABA"
+  // Todo lo que indiquemos entre llaves sera interpretado como codigo JS
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="App">
+        <h1>Bienvenido usuario</h1>
+        <span>Su nombre es {name}</span>
+        <span>Su ciudad es {city}</span>
+        <p>Numero = {60/2}</p>
+        <p>{name.toLocaleUpperCase()}</p>
+        <label htmlFor="name">Introduzca su {name}</label>
+        <input type="text" name="" id="" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count ++)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+    
     </>
-  )
-}
+  );
+  // Codigo JSX = JavaScript Extension
+};
 
-export default App
+export default App;
